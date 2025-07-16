@@ -54,7 +54,7 @@ export default function TaskPage() {
 
 
     const deleteHandle = async (id) => {
-        const del = await axios.delete(`https://task-manager-with-authentication.onrender.com//TaskPage/${id}`);
+        const del = await axios.delete(`https://task-manager-with-authentication.onrender.com/TaskPage/${id}`);
         getData();
     };
 
