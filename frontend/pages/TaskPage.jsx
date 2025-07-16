@@ -46,7 +46,7 @@ export default function TaskPage() {
 
     const getData = async (e) => {
         // e.preventDefault();
-        const connection = await axios.get(`https://task-manager-with-authentication.onrender.com//TaskPage`,{userId: localStorage.getItem("userId")})
+        const connection = await axios.get(`https://task-manager-with-authentication.onrender.com/TaskPage`,{userId: localStorage.getItem("userId")})
         // const userId=connection.data.taskData[0].userId
         settasks(connection.data.taskData);
         // console.log(connection.data.taskData[0].userId)
