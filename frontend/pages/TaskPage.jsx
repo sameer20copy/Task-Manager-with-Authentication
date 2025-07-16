@@ -74,7 +74,6 @@ export default function TaskPage() {
                         <br />
                         <textarea spellCheck={false} onChange={saveData} value={userTask.description} name="description" placeholder="Enter Discription" className="p-3 mt-0 h-50 w-full border  border-gray-300 rounded-xl shadow-sm focus:outline-none resize-none text-base placeholder-gray-400 bg-gray-900"></textarea>
                         <button onClick={sendData} className="w-full mt-4 p-3 rounded-xl cursor-pointer active:scale-95 bg-cyan-600 text-gray-300">Save</button>
-                        <button onClick={getData}>test</button>
                     </form>
                 </div>
                 <div className="w-full ml-5 mr-5 mt-5 rounded-xl flex flex-col ">
