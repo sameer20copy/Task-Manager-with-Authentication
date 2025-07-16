@@ -22,8 +22,6 @@ router.post("/",async (req,res)=>{
     res.status(200).json({message:"Enquiry Saved successfully"});
 })
 
-//$2b$10$YI10H01iiubXUH2xybP9zez1DvYH4u2NPYnlRTkNxE6rlhWzvZAPu
-//
 
 router.post("/login", async(req,res)=>{
     const {email,password}=req.body
