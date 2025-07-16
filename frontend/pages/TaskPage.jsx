@@ -21,7 +21,7 @@ export default function TaskPage() {
         setstatus(newStatus);           // update local state (optional)
         setcount(!count);
 
-        const result = await axios.post("https://task-manager-with-authentication.onrender.com/status", { status: status, id: id })
+        const result = await axios.post("https://task-manager-with-authentication.onrender.com/status", { status: newStatus, id: id })
         console.log(result.data.status)
         getData();
     }
