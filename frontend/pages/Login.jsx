@@ -22,7 +22,7 @@ const Login = () => {
 
   const sendData = async (e) => {
     e.preventDefault();
-    const result = await axios.post("http://localhost:3000/login", loginData);
+    const result = await axios.post("https://task-manager-with-authentication.onrender.com/login", loginData);
     // console.log(result.data.fullData.dbresult._id);
     setmsg(result.data.passwordMessage)
     setemailCheck(result.data.emailMessage)

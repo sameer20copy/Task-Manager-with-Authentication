@@ -21,7 +21,7 @@ export default function TaskPage() {
         setstatus(newStatus);           // update local state (optional)
         setcount(!count);
 
-        const result = await axios.post("http://localhost:3000/TaskPage/status", { status: status, id: id })
+        const result = await axios.post("https://task-manager-with-authentication.onrender.com/status", { status: status, id: id })
         console.log(result.data.status)
         getData();
     }
@@ -34,7 +34,7 @@ export default function TaskPage() {
         e.preventDefault();
         const userId = localStorage.getItem("userId")
         const taskWithStatus = { ...userTask, status, userId };
-        const result = await axios.post("http://localhost:3000/TaskPage", taskWithStatus);
+        const result = await axios.post("https://task-manager-with-authentication.onrender.com/TaskPage", taskWithStatus);
         setuserTask({
             title: "",
             description: "",
@@ -46,7 +46,7 @@ export default function TaskPage() {
 
     const getData = async (e) => {
         // e.preventDefault();
-        const connection = await axios.get(`http://localhost:3000/TaskPage`,{userId: localStorage.getItem("userId")})
+        const connection = await axios.get(`https://task-manager-with-authentication.onrender.com//TaskPage`,{userId: localStorage.getItem("userId")})
         // const userId=connection.data.taskData[0].userId
         settasks(connection.data.taskData);
         // console.log(connection.data.taskData[0].userId)
@@ -54,7 +54,7 @@ export default function TaskPage() {
 
 
     const deleteHandle = async (id) => {
-        const del = await axios.delete(`http://localhost:3000/TaskPage/${id}`);
+        const del = await axios.delete(`https://task-manager-with-authentication.onrender.com//TaskPage/${id}`);
         getData();
     };
 

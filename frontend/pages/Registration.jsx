@@ -21,7 +21,7 @@ export default function Registration() {
     const sendData = async (e) => {
         try {
             e.preventDefault();
-            const result = await axios.post("http://localhost:3000/", userData);
+            const result = await axios.post("https://task-manager-with-authentication.onrender.com/", userData);
             setuserdata({
                 name: "",
                 email: "",
